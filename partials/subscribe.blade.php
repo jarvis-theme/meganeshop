@@ -10,6 +10,26 @@
             <div class="clr"></div>
         </form>
         <div class="list-banks">
+            @if($sosial->fb)
+                <a target="_blank" href="{{url($sosial->fb)}}" title="Facebook"><i class="social fa fa-facebook"></i></a>
+            @endif
+            @if($sosial->tw)
+                <a target="_blank" href="{{url($sosial->tw)}}" title="Twitter"><i class="social fa fa-twitter"></i></a>
+            @endif
+            @if($sosial->gp)
+                <a target="_blank" href="{{url($sosial->gp)}}" title="Google+"><i class="social fa fa-google-plus"></i></a>
+            @endif
+            @if($sosial->pt)
+                <a target="_blank" href="{{url($sosial->pt)}}" title="Pinterest"><i class="social fa fa-pinterest"></i></a>
+            @endif
+            @if($sosial->tl)
+                <a target="_blank" href="{{url($sosial->tl)}}" title="Tumblr"><i class="social fa fa-tumblr"></i></a>
+            @endif
+            @if($sosial->ig)
+                <a target="_blank" href="{{url($sosial->ig)}}" title="Instagram"><i class="social fa fa-instagram"></i></a>
+            @endif  
+        </div>
+        <div class="list-banks">
             @foreach(list_banks() as $banks)    
                 {{HTML::image(bank_logo($banks),'bank', array('class'=>'banks'))}}
             @endforeach 

@@ -752,3 +752,14 @@ footer .copyright p {margin:0}
 	}
 }
 .accordion-inner .accordion-heading{margin: 5px 0}.nodecor{text-decoration: none}.center{text-align: center}
+.social {
+	margin: 5px;
+	background: #333;
+	color: #e1e1e1;
+	border-radius: 50%;
+	height: 35px;
+	line-height: 35px;
+	width: 35px;
+	text-align: center;
+}
+.social:hover{opacity: 0.5}
