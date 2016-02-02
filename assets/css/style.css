@@ -170,7 +170,7 @@ nav#menu ul.navbar-nav li a {
 }
 nav#menu ul.navbar-nav li ul li.submenu2 {
 	padding: 10px 0px 10px 20px !important;
-	margin: 0px 15px;
+	margin: 0px 15px 0 25px;
 }
 nav#menu ul.navbar-nav li ul li.submenu2 > a { padding: 0px !important; }
 nav#menu ul.navbar-nav li a:hover, nav#menu ul.navbar-nav li.active a,
@@ -586,7 +586,7 @@ footer .copyright p {margin:0}
 
 @media only screen and (max-width: 1080px) {
 	header #logo {margin-bottom:30px; text-align:center}
-	header #logo img{width:100%; height:auto; max-width:300px}
+	header #logo img{max-width:100%; height:auto;}
 	nav#menu {margin:0 auto 30px;}
 	nav#menu ul.navbar-nav {float:none; width:auto; text-align:center}
 	nav#menu ul.navbar-nav li {float:none; display:inline-block}

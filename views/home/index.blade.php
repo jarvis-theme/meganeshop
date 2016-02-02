@@ -8,7 +8,7 @@
                             @foreach(horizontal_banner() as $banner)    
                             <li class="item col-xs-12 col-sm-12">
                                 <a href="{{url($banner->url)}}">
-                                    {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', 'height'=>'200', "class"=>"img-responsive"))}}
+                                    {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', "class"=>"img-responsive"))}}
                                 </a>
                             </li>
                             @endforeach
@@ -124,7 +124,7 @@
                             @foreach(list_koleksi() as $koleksi)
                             <div class="item">
                                 <a href="{{koleksi_url($koleksi)}}">
-                                    <img class="img-responsive" src="{{url(koleksi_image_url($koleksi->gambar,'medium'))}}" alt="brand" width="204" height="86" />
+                                    <img class="img-responsive" src="{{url(koleksi_image_url($koleksi->gambar,'medium'))}}" alt="brand" width="204" />
                                 </a>
                             </div>
                             @endforeach

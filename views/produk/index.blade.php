@@ -1,8 +1,5 @@
 <section id="breadcrumb">
     <div class="container">
-        <!-- <a href="{{url('home')}}">Home</a>
-        <span>/</span>
-        <a href="{{url('produk')}}">Produk</a> -->
         {{breadcrumbProduk(null, '; <span>/</span> ', ';', true, @$category, @$collection)}}
     </div>
 </section>
@@ -61,6 +58,7 @@
                 </div>
             </div>
             @endif
+            @if(best_seller()->count() > 0)
             <div id="best-seller" class="block">
             	<div class="title"><h2>Produk Terlaris</h2></div>
             	<ul class="block-content">
@@ -68,7 +66,7 @@
                     <li>
                     	<a href="{{product_url($best)}}">
                         	<div class="img-block">
-                                {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81','height'=>'64'))}}
+                                {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81'))}}
                             </div>
                             <p class="product-name">{{short_description($best->nama,35)}}</p>
                             <p class="price">{{price($best->hargaJual)}}</p>
@@ -77,10 +75,12 @@
                     @endforeach
                 </ul>
             </div>
+            @endif
+            @if(recentBlog()->count() > 0)
             <div id="latest-news" class="block">
             	<div class="title"><h2>Artikel Terbaru</h2></div>
             	<ul class="block-content">
-                    @foreach(list_blog(2) as $blogs)
+                    @foreach(recentBlog(null,2) as $blogs)
                     <li>
                         <h5 class="title-news">{{$blogs->judul}}</h5>
                         <p>{{short_description($blogs->isi, 150)}}<a class="read-more" href="{{blog_url($blogs)}}">Selengkapnya</a></p>
@@ -89,6 +89,7 @@
                     @endforeach
                 </ul>
             </div>
+            @endif
         </div>
         <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
             @if( count(list_product(null, @$category)) > 0)
@@ -139,7 +140,7 @@
     <div>
         @foreach(horizontal_banner() as $banner)    
         <a href="{{url($banner->url)}}">
-            {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', 'height'=>'200', "class"=>"img-responsive"))}}
+            {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', "class"=>"img-responsive"))}}
         </a>
         @endforeach 
     </div>

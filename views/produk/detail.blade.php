@@ -66,7 +66,7 @@
                     <li>
                     	<a href="{{product_url($best)}}">
                         	<div class="img-block">
-                                {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81','height'=>'64'))}}
+                                {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81'))}}
                             </div>
                             <p class="product-name">{{short_description($best->nama,35)}}</p>
                             <p class="price">{{price($best->hargaJual)}}</p> 
@@ -79,15 +79,17 @@
                 </div>
             </div>
             @endif
+            @if(vertical_banner()->count() > 0)
             <div id="advertising" class="block">
                 @foreach(vertical_banner() as $key => $banners)
                 <div class="img-block">
             		<a href="{{url($banners->url)}}">
-                        {{HTML::image(banner_image_url($banners->gambar),'Info Promo',array('width'=>'272','height'=>'391','class'=>'img-responsive'))}}
+                        {{HTML::image(banner_image_url($banners->gambar),'Info Promo',array('class'=>'img-responsive'))}}
                     </a>
                 </div>
                 @endforeach
             </div>
+            @endif
         </div>
         <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
             <form action="#" id="addorder">

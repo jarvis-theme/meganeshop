@@ -1,5 +1,5 @@
 <div class="top-list container">
-    <h2 class="title"><i class="fa fa-user"></i> &nbsp;Edit Profile</h2>
+    <h2 class="title"><i class="fa fa-user"></i> &nbsp;Ubah Profil</h2>
     <div class="clr"></div>
     <hr>
 </div>
@@ -10,8 +10,8 @@
             <div id="advertising" class="block">
             	<div class="title"><h2>My Account</h2></div>
             	<ul class="nav">
-					<li><a href="{{url('member')}}">Order History</a></li>                         
-					<li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
+					<li><a href="{{url('member')}}">Daftar Pembelian</a></li>                         
+					<li><a href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
 				</ul>
             </div>            
         </div>
@@ -44,13 +44,13 @@
 				<div class="form-group">
 					<label for="inputCountry" class="col-md-2 control-label">Provinsi</label>
 					<div class="col-md-4">
-						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi , ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi', 'class'=>'form-control'))}}
+						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi', 'class'=>'form-control'))}}
 					</div>
 				</div>      
 				<div class="form-group">
 					<label for="inputCountry" class="col-md-2 control-label">Kota</label>
 					<div class="col-md-4">
-						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota , ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota', 'class'=>'form-control'))}}
+						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota', 'class'=>'form-control'))}}
 					</div>
 				</div>              
 				<div class="form-group">

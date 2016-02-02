@@ -88,7 +88,7 @@
         </div>
         <div class="row inner-column">
             <div class="col-md-5">
-            @if($order->jenisPembayaran==1) 
+            @if($order->jenisPembayaran==1 && $order->status == 0) 
                 @if($checkouttype==1) 
                 {{-- */  $form_url = 'konfirmasiorder/' /* --}}
                 @else 

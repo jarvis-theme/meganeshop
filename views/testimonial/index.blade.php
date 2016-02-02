@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     @endif
-
+                    @if(best_seller()->count() > 0)
                     <div id="best-seller" class="block">
                     	<div class="title"><h2>Produk Terlaris</h2></div>
                     	<ul class="block-content">
@@ -61,7 +61,7 @@
                             <li>
                             	<a href="{{product_url($best)}}">
                                 	<div class="img-block">
-                                        {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81','height'=>'64'))}}
+                                        {{HTML::image(product_image_url($best->gambar1,'thumb'), $best->nama,array('width'=>'81'))}}
                                     </div>
                                     <p class="product-name">{{short_description($best->nama,35)}}</p>
                                     <p class="price">{{price($best->hargaJual)}}</p>
@@ -73,15 +73,18 @@
                         	<a href="{{url('produk')}}">Lihat Semua</a>
                         </div>
                     </div>
+                    @endif
+                    @if(vertical_banner()->count() > 0)
                     <div id="advertising" class="block">
                         @foreach(vertical_banner() as $banner)    
                         <div class="img-block">
                             <a href="{{url($banner->url)}}">
-                                {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', 'height'=>'200', "class"=>"img-responsive"))}}
+                                {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168',  "class"=>"img-responsive"))}}
                             </a>
                         </div>
                         @endforeach 
                     </div>
+                    @endif
                 </div>
                 <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
                     <div class="contact-us">
@@ -114,7 +117,7 @@
             <div>
                 @foreach(horizontal_banner() as $banner)    
                 <a href="{{url($banner->url)}}">
-                    {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', 'height'=>'200', "class"=>"img-responsive"))}}
+                    {{HTML::image(banner_image_url($banner->gambar), 'Info Promo', array('width'=>'1168', "class"=>"img-responsive"))}}
                 </a>
                 @endforeach 
             </div>

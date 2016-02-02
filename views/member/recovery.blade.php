@@ -28,16 +28,18 @@
             <br>
         </div>
         <div class="col-lg-3 col-xs-12 col-sm-4 pull-left">
+            @if(vertical_banner()->count() > 0)
             <div id="advertising" class="block">
                 @foreach(vertical_banner() as $banner)
                 <div class="img-block">
                     <a href="{{url($banner->url)}}">
-                        {{HTML::image(banner_image_url($banner->gambar),'Info Promo',array('width'=>'272','height'=>'391','class'=>'img-responsive'))}}
+                        {{HTML::image(banner_image_url($banner->gambar),'Info Promo',array('class'=>'img-responsive'))}}
                     </a>
                 </div>
                 @endforeach
             </div>
             <br>
+            @endif
         </div>
     </div>
 </div>

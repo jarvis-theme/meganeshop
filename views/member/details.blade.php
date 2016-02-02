@@ -1,5 +1,5 @@
 <div class="top-list container">
-    <h2 class="title"><i class="fa fa-history"></i> &nbsp;Order History</h2>
+    <h2 class="title"><i class="fa fa-history"></i> &nbsp;Daftar Pembelian</h2>
     <div class="clr"></div>
     <hr>
 </div>
@@ -10,8 +10,8 @@
             <div id="advertising" class="block">
             	<div class="title"><h2>My Account</h2></div>
             	<ul class="nav">
-					<li><a href="{{url('member')}}">Order History</a></li>                         
-					<li><a href="{{url('member/profile/edit')}}">Edit Profile</a></li>
+					<li><a href="{{url('member')}}">Daftar Pembelian</a></li>                         
+					<li><a href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
 				</ul>
             </div>            
         </div>
@@ -102,7 +102,7 @@
 									@endif 
 								@endif
 								@if($pengaturan->checkoutType==1) 
-									@if($item->status <= 1)
+									@if($item->status < 1)
 									<button onclick="window.open('{{url('konfirmasiorder/'.$item->id)}}','_blank')" class="btn btn-small btn-success" data-title="Edit" data-placement="top" data-tip="tooltip"><i class="fa fa-check"></i></button>
 									@endif 
 								@endif

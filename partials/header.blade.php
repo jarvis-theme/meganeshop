@@ -40,7 +40,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        @foreach(list_category() as $key=>$menu)
+                        @foreach(category_menu() as $key=>$menu)
                             @if($menu->parent=='0')
                             <li class="dropdown">
                                 @if(count($menu->anak) < 1)
@@ -53,7 +53,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     @foreach($menu->anak as $key => $submenu)
-                                    <li><a href="{{category_url($submenu)}}">{{--$submenu->nama--}}Perlengkapan Bayi Lima</a></li>
+                                    <li><a href="{{category_url($submenu)}}">{{$submenu->nama}}</a></li>
                                         @if(count($submenu->anak->count()) > 0)
                                         <ul>
                                             @foreach($submenu->anak as $submenu2)

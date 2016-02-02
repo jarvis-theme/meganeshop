@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="inner-column row">
         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
+            @if(vertical_banner()->count() > 0)
             <div id="advertising" class="block">
                 @foreach(vertical_banner() as $banner)
             	<div class="img-block">
@@ -10,6 +11,7 @@
                 </div>
                 @endforeach
             </div>
+            @endif
         </div>
         <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
 	        <div class="contact-us">
