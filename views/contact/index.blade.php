@@ -94,10 +94,11 @@
                     @endif
                 </div>
                 <div class="contact-desc">
-                    <p><strong>Alamat :</strong> {{$kontak->alamat}}</p>
-                    <span><i class="phone"></i> {{$kontak->telepon ? $kontak->telepon : ' - '}}</span>
-                    <span><i class="bbm"></i> {{$kontak->bb ? $kontak->bb : '&nbsp;&nbsp;-&nbsp;'}}</span>
-                    <span><i class="mail"></i> {{$kontak->email}}</span>
+                    <p><strong>Alamat :</strong> {{$kontak->alamat}}</p><br>
+                    <span><i class="fa fa-mobile fa-lg"></i> {{$kontak->hp ? $kontak->hp : ' - '}}</span><br>
+                    <span><i class="fa fa-phone"></i> {{$kontak->telepon ? $kontak->telepon : ' - '}}</span><br>
+                    <span><i class="fa fa-comment"></i> {{$kontak->bb ? $kontak->bb : '&nbsp;&nbsp;-&nbsp;'}}</span><br>
+                    <span><i class="fa fa-envelope"></i> {{$kontak->email}}</span>
                     <div class="clr"></div>
                 </div>
                 <br><br>

@@ -70,8 +70,8 @@
                                 @endif
                             </li>
                             @endif
-                        @endforeach                    
-                    </ul>       
+                        @endforeach 
+                    </ul>
                 </div>
             </nav>
             <form class="navbar col-lg-6 col-xs-12" id="frm-search" action="{{URL::to('search')}}" method="post">

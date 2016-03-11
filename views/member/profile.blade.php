@@ -10,10 +10,10 @@
             <div id="advertising" class="block">
             	<div class="title"><h2>My Account</h2></div>
             	<ul class="nav">
-					<li><a href="{{url('member')}}">Daftar Pembelian</a></li>                         
+					<li><a href="{{url('member')}}">Daftar Pembelian</a></li>
 					<li><a href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
 				</ul>
-            </div>            
+            </div>
         </div>
         <div id="center_column" class="col-md-9">
 			{{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
@@ -22,7 +22,7 @@
 					<div class="col-md-4">
 						<input type="text" class="form-control" id="inputName" name="nama" value="{{$user->nama}}" placeholder="Nama" required>
 					</div>
-				</div>            
+				</div>
 				<div class="form-group">
 					<label for="inputEmail1" class="col-md-2 control-label">Email</label>
 					<div class="col-md-4">
@@ -40,19 +40,19 @@
 					<div class="col-md-4">
 						{{Form::select('negara',array('' => '-- Pilih Negara --') + $negara, ($user ? $user->negara :(Input::old("negara")? Input::old("negara") :"")), array('required'=>'', 'id'=>'negara', 'class'=>'form-control'))}}
 					</div>
-				</div>      
+				</div>
 				<div class="form-group">
 					<label for="inputCountry" class="col-md-2 control-label">Provinsi</label>
 					<div class="col-md-4">
 						{{Form::select('provinsi',array('' => '-- Pilih Provinsi --') + $provinsi, ($user ? $user->provinsi :(Input::old("provinsi")? Input::old("provinsi") :"")),array('required'=>'','id'=>'provinsi', 'class'=>'form-control'))}}
 					</div>
-				</div>      
+				</div>
 				<div class="form-group">
 					<label for="inputCountry" class="col-md-2 control-label">Kota</label>
 					<div class="col-md-4">
 						{{Form::select('kota',array('' => '-- Pilih Kota --') + $kota, ($user ? $user->kota :(Input::old("kota")? Input::old("kota") :"")),array('required'=>'','id'=>'kota', 'class'=>'form-control'))}}
 					</div>
-				</div>              
+				</div>
 				<div class="form-group">
 					<label for="inputAddress" class="col-md-2 control-label">Alamat</label>
 					<div class="col-md-4">

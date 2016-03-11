@@ -56,7 +56,9 @@
                                         @endforeach
                                     </ul>
                                     <div class="clr"></div>
+                                    @if(count(home_product()) > 0)
                                     <a class="view-all" href="{{url('produk')}}">View All</a>
+                                    @endif
                                 </div>
 
                                 <div id="new" class="new-content">
@@ -84,7 +86,9 @@
                                         @endforeach
                                     </ul>
                                     <div class="clr"></div>
+                                    @if(count(new_product()) > 0)
                                     <a class="view-all" href="{{url('produk')}}">View All</a>
+                                    @endif
                                 </div>
 
                                 <div id="best-seller" class="new-content">
@@ -112,7 +116,9 @@
                                         @endforeach
                                     </ul>
                                     <div class="clr"></div>
+                                    @if(count(best_seller()) > 0)
                                     <a class="view-all" href="{{url('produk')}}">View All</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

@@ -19,7 +19,7 @@
 	            <div class="contact-desc">
                     {{Form::open(array('url'=>'konfirmasiorder','method'=>'post'))}}
                         <p class="form-group">
-                        	<input class="form-control" placeholder="Kode Order" type="text" required>
+                        	<input class="form-control" placeholder="Kode Order" type="text" name="kodeorder" required>
                     	</p>
                         <button class="btn btn-success">Cari Kode</button>
                     {{Form::close()}}
