@@ -9,7 +9,7 @@
                     @else
                     <a href="#">
                     @endif
-                        {{HTML::image(slide_image_url($slide->gambar), 'slideshow banner', array('class'=>'img-responsive'))}}
+                        {{HTML::image(slide_image_url($slide->gambar), $slide->title, array('class'=>'img-responsive'))}} 
                     </a>
                 </li>
                 @endforeach

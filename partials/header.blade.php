@@ -25,7 +25,7 @@
         <div class="row">
             <div id="logo" class="col-xs-12 col-sm-12 col-lg-4">
                 <a href="{{url('home')}}">
-                    {{HTML::image(logo_image_url(), Theme::place('title'))}}
+                    {{HTML::image(logo_image_url(), Theme::place('title'))}} 
                 </a>
             </div>
             <nav id="menu" class="navbar navbar-default col-xs-12 col-sm-12 col-lg-8" role="navigation">

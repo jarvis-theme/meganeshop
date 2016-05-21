@@ -2,7 +2,8 @@
                 <div class="top-footer">
                     <div class="container">
                         <div class="row">
-                            {{ Theme::partial('subscribe') }}   
+                            {{ Theme::partial('subscribe') }} 
+
                             @foreach(all_menu() as $key=>$group)
                             <div id="links-foot" class="col-xs-12 col-sm-4 col-lg-2">
                                 <h4 class="title">{{$group->nama}}</h4>
@@ -28,4 +29,4 @@
                     </div>
                 </div>
             </footer>
-            {{pluginPowerup()}}
+            {{pluginPowerup()}} 
