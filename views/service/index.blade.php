@@ -16,7 +16,7 @@
                             </div>
                             @endif
                             @if(vertical_banner()->count() > 0)
-                            <div id="advertising" class="block">
+                            <div id="banner" class="block">
                                 @foreach(vertical_banner() as $banners)
                             	<div class="img-block">
                             		<a href="{{url($banners->url)}}">

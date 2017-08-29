@@ -2,7 +2,7 @@
     <div class="inner-column row">
         <div id="left_sidebar" class="col-lg-3 col-xs-12 col-sm-4">
             @if(vertical_banner()->count() > 0)
-            <div id="advertising" class="block">
+            <div id="banner" class="block">
                 @foreach(vertical_banner() as $banner)
                 <div class="img-block">
                     <a href="{{url($banner->url)}}">
@@ -13,7 +13,7 @@
             </div>
             @endif
         </div>
-        <div id="center_column" class="col-lg-9 col-xs-12 col-sm-8">
+        <div id="center_column" class="col-lg-5 col-xs-12 col-sm-5">
             <div class="contact-us">
                 <h2 class="title">Konfirmasi Order</h2>
                 <div class="contact-desc">

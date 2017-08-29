@@ -1,21 +1,21 @@
 <div class="top-list container">
-    <h2 class="title"><i class="fa fa-user"></i> &nbsp;Ubah Profil</h2>
-    <div class="clr"></div>
-    <hr>
+	<h2 class="title"><i class="fa fa-user"></i> &nbsp;Ubah Profil</h2>
+	<div class="clr"></div>
+	<hr>
 </div>
 
 <div class="container">
 	<div class="inner-column row">
-        <div id="left_sidebar" class="col-md-3">
-            <div id="advertising" class="block">
-            	<div class="title"><h2>My Account</h2></div>
-            	<ul class="nav">
+		<div id="left_sidebar" class="col-md-3">
+			<div id="advertising" class="block">
+				<div class="title"><h2>My Account</h2></div>
+				<ul class="nav">
 					<li><a href="{{url('member')}}">Daftar Pembelian</a></li>
-					<li><a href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
+					<li class="active"><a href="{{url('member/profile/edit')}}">Ubah Profil</a></li>
 				</ul>
-            </div>
-        </div>
-        <div id="center_column" class="col-md-9">
+			</div>
+		</div>
+		<div id="center_column" class="col-md-9">
 			{{Form::open(array('url'=>'member/update','method'=>'put','class'=>'form-horizontal'))}}
 				<div class="form-group">
 					<label for="inputName" class="col-md-2 control-label">Nama</label>
@@ -91,6 +91,6 @@
 					</div>
 				</div>
 			{{Form::close()}}
-        </div>
-    </div>
+		</div>
+	</div>
 </div>

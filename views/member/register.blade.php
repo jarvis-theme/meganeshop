@@ -6,7 +6,7 @@
 <div class="container" id="main-layout">
     <div class="inner-column row">
         <div class="col-lg-3 col-xs-12 col-sm-4 pull-right">
-            <div id="advertising" class="block">
+            <div id="banner" class="block">
                 @foreach(vertical_banner() as $banner)
                 <div class="img-block">
                     <a href="{{url($banner->url)}}">

@@ -80,7 +80,7 @@
             </div>
             @endif
             @if(vertical_banner()->count() > 0)
-            <div id="advertising" class="block">
+            <div id="banner" class="block">
                 @foreach(vertical_banner() as $key => $banners)
                 <div class="img-block">
                     <a href="{{url($banners->url)}}">
@@ -102,33 +102,49 @@
                             </div>
                             <div id="thumb-view">
                                 <ul id="thumb-list" class="owl-carousel owl-theme">
-                                    @if($produk->gambar1 != '')
-                                    <li class="item">
-                                        <a class="zoom fancybox" href="{{product_image_url($produk->gambar1,'large')}}" title="{{$produk->nama}}">
-                                        {{HTML::image(product_image_url($produk->gambar1,'medium'),'gambar1',array('width'=>'130', 'height'=>'174'))}}
-                                        </a>
-                                    </li>
+                                    {{--*/ $x=0; /*--}}
+                                    @if($produk->gambar1!='')
+                                        {{--*/ $x++; /*--}}
                                     @endif
-                                    @if($produk->gambar2 != '')
-                                    <li class="item">
-                                        <a class="zoom fancybox" href="{{product_image_url($produk->gambar2,'large')}}" title="{{$produk->nama}}">
-                                        {{HTML::image(product_image_url($produk->gambar2,'medium'),'gambar2',array('width'=>'130', 'height'=>'174'))}}
-                                        </a>
-                                    </li>
+                                    @if($produk->gambar2!='')
+                                        {{--*/ $x++; /*--}}
                                     @endif
-                                    @if($produk->gambar3 != '')
-                                    <li class="item">
-                                        <a class="zoom fancybox" href="{{product_image_url($produk->gambar3,'large')}}" title="{{$produk->nama}}">
-                                        {{HTML::image(product_image_url($produk->gambar3,'medium'),'gambar3',array('width'=>'130', 'height'=>'174'))}}
-                                        </a>
-                                    </li>
+                                    @if($produk->gambar3!='')
+                                        {{--*/ $x++; /*--}}
                                     @endif
-                                    @if($produk->gambar4 != '')
-                                    <li class="item">
-                                        <a class="zoom fancybox" href="{{product_image_url($produk->gambar4,'large')}}" title="{{$produk->nama}}">
-                                        {{HTML::image(product_image_url($produk->gambar4,'medium'),'gambar4',array('width'=>'130', 'height'=>'174'))}}
-                                        </a>
-                                    </li>
+                                    @if($produk->gambar4!='')
+                                        {{--*/ $x++; /*--}}
+                                    @endif
+
+                                    @if($x > 1)
+                                        @if($produk->gambar1 != '')
+                                        <li class="item">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar1,'large')}}" title="{{$produk->nama}}">
+                                            {{HTML::image(product_image_url($produk->gambar1,'medium'),'gambar1',array('width'=>'130', 'height'=>'174'))}}
+                                            </a>
+                                        </li>
+                                        @endif
+                                        @if($produk->gambar2 != '')
+                                        <li class="item">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar2,'large')}}" title="{{$produk->nama}}">
+                                            {{HTML::image(product_image_url($produk->gambar2,'medium'),'gambar2',array('width'=>'130', 'height'=>'174'))}}
+                                            </a>
+                                        </li>
+                                        @endif
+                                        @if($produk->gambar3 != '')
+                                        <li class="item">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar3,'large')}}" title="{{$produk->nama}}">
+                                            {{HTML::image(product_image_url($produk->gambar3,'medium'),'gambar3',array('width'=>'130', 'height'=>'174'))}}
+                                            </a>
+                                        </li>
+                                        @endif
+                                        @if($produk->gambar4 != '')
+                                        <li class="item">
+                                            <a class="zoom fancybox" href="{{product_image_url($produk->gambar4,'large')}}" title="{{$produk->nama}}">
+                                            {{HTML::image(product_image_url($produk->gambar4,'medium'),'gambar4',array('width'=>'130', 'height'=>'174'))}}
+                                            </a>
+                                        </li>
+                                        @endif
                                     @endif
                                 </ul>
                             </div>
@@ -189,8 +205,10 @@
                             </div>
                             <div class="clr"></div>
                             <div class="btm-details">
-                                <button class="btn addtocart" type="submit">Beli</button>
-                                <div class="clr"></div>
+                                <div class="col-sm-5 col-sm-offset-4">
+                                    <button class="btn addtocart" type="submit">Beli</button>
+                                    <div class="clr"></div>
+                                </div>
                             </div>
                         </div>
                         <div class="clr"></div>
@@ -216,7 +234,7 @@
                                 <div class="icon-info icon-new">Baru</div>
                                 @endif
                             </div>
-                            <h5 class="product-name">{{$produk_lain->nama}}</h5>
+                            <h5 class="product-name">{{short_description($produk_lain->nama,20)}}</h5>
                             <span class="price">{{price($produk_lain->hargaJual)}}</span>
                             <a href="{{product_url($produk)}}" class="buy-btn">Lihat</a>
                         </li>

@@ -484,7 +484,7 @@ nav#menu .navbar-form button:hover {background:#f3906c; color:#fff}
 .attribute .form-group label {text-align:right;}
 .attribute .form-group .form-control {border-radius:3px; padding:0 5px}
 
-.product-details .btm-details {border-top:2px solid #e0dfdf; padding:20px 0; margin:10px 0 30px; text-align:right}
+.product-details .btm-details {border-top:2px solid #e0dfdf; padding:20px 0; margin:10px 0 30px;}
 .product-details .btm-details .col-md-5 {padding:0}
 .product-details .btm-details .btn {
 	background:#1ca0e4; 
@@ -677,7 +677,9 @@ footer .copyright p {margin:0}
 .srclist{margin-left: 15px}
 #stock{color:#5cb85c; margin-right:5px}#empty-stock{color:#d9534f; margin-right:5px}
 #news{margin-bottom: 5px}
-.maplocation{float:right;width:100%}.order-detail{margin-left: 8px}.underline{text-decoration: underline}
+.maplocation{float:right;width:100%;clear: both;margin-bottom: 20px;}
+.order-detail{margin-left: 8px}
+.underline{text-decoration: underline}
 .accordion-widget {
   margin: 0 0 38px 0;
 }
@@ -779,4 +781,17 @@ form[name="order"] > input[name="SAVE"] {
 form[name="order"] > input[name="SAVE"]:hover {
 	opacity: 0.8;
 	cursor: pointer;
+}
+#left_sidebar #banner { box-shadow: initial; }
+#left_sidebar .block ul li.active { background: #f2f2f2; }
+.contact-desc { clear: both; }
+#advertising .img-block img { display: inline-block; }
+.readmore { color: #ff1818; }
+
+
+
+@media (max-width: 767px) {
+	.product-list { margin-bottom: 0; }
+	.pagination { margin: 0; }
+	input[name="captcha"] { margin-top: 10px; }
 }

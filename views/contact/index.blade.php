@@ -73,7 +73,7 @@
             </div>
             @endif
             @if(vertical_banner()->count() > 0)
-            <div id="advertising" class="block">
+            <div id="banner" class="block">
                 @foreach(vertical_banner() as $banners)
                 <div class="img-block">
                     <a href="{{url($banners->url)}}">
@@ -94,7 +94,7 @@
                     @endif
                 </div>
                 <div class="contact-desc">
-                    <p><strong>Alamat :</strong> {{$kontak->alamat}}</p><br>
+                    <p><strong>Alamat :</strong> {{$kontak->alamat}}</p>
                     <span><i class="fa fa-mobile fa-lg"></i> {{$kontak->hp ? $kontak->hp : ' - '}}</span><br>
                     <span><i class="fa fa-phone"></i> {{$kontak->telepon ? $kontak->telepon : ' - '}}</span><br>
                     <span><i class="fa fa-comment"></i> {{$kontak->bb ? $kontak->bb : '&nbsp;&nbsp;-&nbsp;'}}</span><br>

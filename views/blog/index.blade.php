@@ -30,7 +30,7 @@
             </div>
             @endif
             @if(vertical_banner()->count() > 0)
-            <div id="advertising" class="block">
+            <div id="banner" class="block">
                 @foreach(vertical_banner() as $banner)
             	<div class="img-block">
             		<a href="{{url($banner->url)}}">
@@ -57,7 +57,7 @@
 		            	</p>
 			            <p>
 			            	{{shortDescription($blog->isi,300)}}<br>
-			            	<a href="{{blog_url($blog)}}" class="theme">Baca Selengkapnya →</a>
+			            	<a href="{{blog_url($blog)}}" class="readmore">Baca Selengkapnya →</a>
 		            	</p>
                         <hr>
                     </article>
