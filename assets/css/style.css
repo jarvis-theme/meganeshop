@@ -787,7 +787,9 @@ form[name="order"] > input[name="SAVE"]:hover {
 .contact-desc { clear: both; }
 #advertising .img-block img { display: inline-block; }
 .readmore { color: #ff1818; }
-
+.picmix { opacity: 0.9; width: 44px; }
+.picmix:hover { opacity: 1; }
+.midtrans { padding: 8px; background: #fbfbfb; }
 
 
 @media (max-width: 767px) {

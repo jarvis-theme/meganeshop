@@ -196,7 +196,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-4 control-label">Jumlah :</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" class="form-control" name="qty" value="1">
+                                                    <input type="text" class="form-control" name="qty" value="1" pattern="[0-9]">
                                                 </div>
                                             </div>
                                         </div>

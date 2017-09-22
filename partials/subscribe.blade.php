@@ -28,6 +28,11 @@
             @if($sosial->ig)
                 <a target="_blank" href="{{url($sosial->ig)}}" title="Instagram"><i class="social fa fa-instagram"></i></a>
             @endif  
+            @if($sosial->picmix)
+                <a target="_blank" href="{{url($sosial->picmix)}}" title="Picmix">
+                    <img class="picmix" src="//d3kamn3rg2loz7.cloudfront.net/blogs/event/icon-picmix.png">
+                </a>
+            @endif
         </div>
         <div class="list-banks">
             @foreach(list_banks() as $banks)    
@@ -50,7 +55,7 @@
             <img src="{{url('img/bank/doku.jpg')}}" alt="doku myshortcart" title="Doku myShortcart" class="banks" />
             @endif 
             @if(count(list_veritrans()) > 0 && list_veritrans()->status == 1 && list_veritrans()->type == 1)
-            <img src="{{url('img/bank/veritrans.png')}}" alt="Veritrans" title="Veritrans">
+            <img src="{{url('img/bank/midtrans.png')}}" alt="Midtrans" title="Midtrans" class="midtrans">
             @endif
         </div>
     </div>
