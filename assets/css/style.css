@@ -178,7 +178,7 @@ nav#menu ul.navbar-nav > .open > a { color:#212121; background:none}
 nav#menu ul.navbar-nav li ul li a{border:none; margin:0; padding:10px 20px; text-transform:none}
 nav#menu ul.navbar-nav li ul li ul li a{ padding: 0px; }
 nav#menu ul.navbar-nav li ul li a:hover {border:none}
-nav#menu ul.navbar-nav li ul li {background:none; padding:0 10px}
+nav#menu ul.navbar-nav li ul li {background:none; padding:0 10px; padding-left: 0;}
 nav#menu .navbar-form {margin-top: 15px;}
 nav#menu .navbar-form input.form-control {box-shadow:none; color:#b6b6b6; font-size:13px; border:1px solid #ccc}
 nav#menu .navbar-form button {color:#cecece}

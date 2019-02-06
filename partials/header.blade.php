@@ -13,7 +13,7 @@
                     <li>{{HTML::link('logout', 'Logout')}}</li>
                 @endif
                     <li class="shopping-cart" id="shoppingcartplace">
-                        <a href="{{url('checkout')}}">{{shopping_cart()}}</a>
+                        {{shopping_cart()}}
                     </li>
                 </ul>
             </div>
